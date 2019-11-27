@@ -6,6 +6,7 @@
 
 #include "Tool_Obdelnik.h"
 #include "Fce_Obdelnik.h"  // kvuli my_task
+#include "InOut_Obdelnik.h"  
 
 void my_task()
 {
@@ -22,8 +23,8 @@ int main()
 {
 	//obdelnik();
 	obdelniky();
-
+	
 	// ---
 
-	// my_task();
+	my_task();
 }
