@@ -1,0 +1,10 @@
+﻿  pch.cpp
+d:\jihlava_skola\semestr_5\ppt\application_12\application_12\pch.h(13): warning C4005: _CRT_SECURE_NO_WARNINGS: předefinování makra
+  d:\jihlava_skola\semestr_5\ppt\application_12\application_12\pch.cpp: note: viz předchozí definice _CRT_SECURE_NO_WARNINGS
+  Application_12.cpp
+d:\jihlava_skola\semestr_5\ppt\application_12\application_12\application_12.cpp(13): warning C4101: o2: neodkazovaná lokální proměnná
+d:\jihlava_skola\semestr_5\ppt\application_12\application_12\application_12.cpp(13): warning C4101: S2: neodkazovaná lokální proměnná
+  Fce_Obdelnik.cpp
+  Tool_Obdelnik.cpp
+  Generování kódu...
+  Application_12.vcxproj -> D:\Jihlava_skola\Semestr_5\PPT\Application_12\Debug\Application_12.exe
