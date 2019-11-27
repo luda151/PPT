@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Tool_Obdelnik.h"
 #include "Fce_Obdelnik.h"
+#include "InOut_Obdelnik.h"
 #include <iostream>  // kvuli printf
 
 void obdelnik()
