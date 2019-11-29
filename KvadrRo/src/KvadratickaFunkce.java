@@ -1,8 +1,8 @@
 public class KvadratickaFunkce {
 
-	private float a;
-	private float b;
-	private float c;
+	private double a;
+	private double b;
+	private double c;
 
 	/**
 	 * Konstruktor, který vytvoří instanci tridy KravdratickaFunkce se zadanimy parametry 
@@ -10,7 +10,7 @@ public class KvadratickaFunkce {
 	 * @param new_b
 	 * @param new_c
 	 */
-	public KvadratickaFunkce(float new_a, float new_b, float new_c) {
+	public KvadratickaFunkce(double new_a, double new_b, double new_c) {
 		this.a=new_a;
 		this.b=new_b;
 		this.c=new_c;
@@ -20,7 +20,7 @@ public class KvadratickaFunkce {
 	 * 
 	 * @return a
 	 */
-	public float getA() {
+	public double getA() {
 		return this.a;
 	}
 
@@ -28,7 +28,7 @@ public class KvadratickaFunkce {
 	 * 
 	 * @return b
 	 */
-	public float getB() {
+	public double getB() {
 		return this.b;
 	}
 
@@ -36,34 +36,43 @@ public class KvadratickaFunkce {
 	 * 
 	 * @return c
 	 */
-	public float getC() {
+	public double getC() {
 		return this.c;
 	}
 
-	public float diskriminant(){
+	public double diskriminant(){
 		return this.getB() * this.getB() - 4 * this.getA() * this.getC();
 	}
 
 
 	public void vypocetKorenu() {
 
-		float x1,x2;
-		float d=this.diskriminant();
+		Tool_IO io=new Tool_IO();
+		double x1,x2;
+		double d=this.diskriminant();
 		if (d > 0) {
-			x1 = (-b + (float) Math.sqrt(d)) / (2 * a);
-			x2 = (-b - (float) Math.sqrt(d)) / (2 * a);
-			System.out.println("Rovnice má dvě řešení.");
-			System.out.print("x1 = " + x1 + "\nx2 = " + x2+"\n");
+			x1 = (-b + (double) Math.sqrt(d)) / (2 * a);
+			x2 = (-b - (double) Math.sqrt(d)) / (2 * a);
+			//System.out.println("Rovnice má dvě řešení.\n");
+			//System.out.print("x1 = " + x1 + "\nx2 = " + x2+"\n");
+			io.writeFirst("Rovnice má dvě řešení.\n");
+			io.writeToFile("x1 = " + x1 + "\nx2 = " + x2+"\n");
+			io.writeNewLine();
+
 		} else if (d == 0) {
 			x1 = -b / (2 * a);
-			System.out.println("Rovnice má jedno řešení.");
-			System.out.print("x = " + x1+"\n");
+			io.writeFirst("Rovnice má jedno řešení.\n");
+			io.writeToFile("x = " + x1+"\n");
+			
+			//System.out.println("Rovnice má jedno řešení.");
+			//System.out.print("x = " + x1+"\n");
 		} else {
-			System.out.print("Rovnice nemá řešení\n");
+			io.writeFirst("Rovnice nemá řešení");
+			//System.out.print("Rovnice nemá řešení\n");
 		}	
 	}
 
-	public float vypocetFunkciHodnoty(float x) {
+	public double vypocetFunkciHodnoty(double x) {
 
 		return ((this.getA()* x * x) + (this.getB()*x + this.getC()));
 

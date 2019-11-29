@@ -6,12 +6,12 @@ public class Tool_Funkce {
 	final int pocetVysledku=50;
 
 	public KvadratickaFunkce kf;
-	public float min;
-	public float max;
-	public float step;
+	public double min;
+	public double max;
+	public double step;
 
 
-	public Tool_Funkce(float min, float max, float step,KvadratickaFunkce kf ) {
+	public Tool_Funkce(double min, double max, double step,KvadratickaFunkce kf ) {
 		this.min=min;
 		this.max=max;
 		this.step=step;
@@ -23,7 +23,7 @@ public class Tool_Funkce {
 
 		double[] vysledky = new double[pocetVysledku];
 
-		float x=min;
+		double x=min;
 		for(int i=0; i< pocetVysledku; i++) {
 			if(x < max) {
 				vysledky[i]=kf.vypocetFunkciHodnoty(x);
@@ -35,11 +35,11 @@ public class Tool_Funkce {
 		return vysledky;
 	}
 
-	public void vzorkovani_II() {
+	public void vzorkovani_II(Tool_IO io) {
 		double[] vysledky = new double[pocetVysledku];
 		double[] xka = new double[pocetVysledku];
 
-		float x=min;
+		double x=min;
 		for(int i=0; i< pocetVysledku; i++) {
 			if(x < max) {
 				xka[i]=x;
@@ -49,8 +49,12 @@ public class Tool_Funkce {
 				break;
 			}
 		}
-		System.out.println("Xka:\n"+ Arrays.toString(xka));
-		System.out.println("Vysledky:\n"+ Arrays.toString(vysledky));
+		io.writeToFile("Xka:\n"+ Arrays.toString(xka)+"\n");
+		io.writeToFile("Vysledky:\n"+ Arrays.toString(vysledky)+"\n");
+		io.writeNewLine();
+		
+	//	System.out.println("Xka:\n"+ Arrays.toString(xka));
+	//	System.out.println("Vysledky:\n"+ Arrays.toString(vysledky));
 
 	}
 
@@ -58,7 +62,7 @@ public class Tool_Funkce {
 		Vzorek[] vysledky = new Vzorek[pocetVysledku];
 		
 
-		float x=min;
+		double x=min;
 		for(int i=0; i< pocetVysledku; i++) {
 			if(x < max) {
 				vysledky[i]= new Vzorek(x,kf.vypocetFunkciHodnoty(x));

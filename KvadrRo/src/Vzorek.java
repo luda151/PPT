@@ -1,9 +1,9 @@
 
 public class Vzorek {
-	public float x;
-	public float hodnota;
+	public double x;
+	public double hodnota;
 
-	public Vzorek(float x, float hodnota) {
+	public Vzorek(double x, double hodnota) {
 		this.x=x;
 		this.hodnota=hodnota;
 	}
