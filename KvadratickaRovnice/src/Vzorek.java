@@ -12,4 +12,7 @@ public class Vzorek {
 	public String toString() { 
 		return String.format("Vzorek v bode: "+this.x+" ma hodnotu: "+this.hodnota); 
 	} 
+	public double getHodnota() {
+		return this.hodnota;
+	}
 }

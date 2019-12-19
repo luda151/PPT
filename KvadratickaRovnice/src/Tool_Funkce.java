@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Tool_Funkce {
 
-	final int pocetVysledku=50;
+	final int pocetVysledku=20;
 
 	public KvadratickaFunkce kf;
 	public double min;
@@ -35,7 +35,7 @@ public class Tool_Funkce {
 		return vysledky;
 	}
 
-	public void vzorkovani_II(Tool_IO io) {
+	public double[][] vzorkovani_II() {
 		double[] vysledky = new double[pocetVysledku];
 		double[] xka = new double[pocetVysledku];
 
@@ -49,13 +49,9 @@ public class Tool_Funkce {
 				break;
 			}
 		}
-		io.writeToFile("Xka:\n"+ Arrays.toString(xka)+"\n");
-		io.writeToFile("Vysledky:\n"+ Arrays.toString(vysledky)+"\n");
-		io.writeNewLine();
 		
-	//	System.out.println("Xka:\n"+ Arrays.toString(xka));
-	//	System.out.println("Vysledky:\n"+ Arrays.toString(vysledky));
-
+		double[][] arr = { xka, vysledky };
+		return arr;
 	}
 
 	public Vzorek[] vzorkovani_III() {

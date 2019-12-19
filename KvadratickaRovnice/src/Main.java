@@ -50,9 +50,9 @@ public class Main {
 		System.out.print("Zadej 'Krok': ");
 		double step= scanner.nextdouble();
 		*/
-		double min= -6;
-		double max= 6;
-		double step = 0.5;
+		double min= -5;
+		double max= 5;
+		double step = 1;
 
 		Tool_Funkce toolFce = new Tool_Funkce(min,max,step,kf); //volani kontruktoru
 		
@@ -75,17 +75,27 @@ public class Main {
 		/* Vzorkovani_II */
 		// Nevyhody
 		// - nevime kolik bude vysledku, takze nevime jak velke pole priparavit. 
-		// - je obtizne vracet dve pole, proto vypisujeme vysledky jiz ve volani funkce
-		 toolFce.vzorkovani_II(io);	
+		
+		
+		 double vysledky_II[][] = toolFce.vzorkovani_II();
+			
+		io.writeToFile("Xka:\n"+ Arrays.toString(vysledky_II[0])+"\n");
+		io.writeToFile("Vysledky:\n"+ Arrays.toString(vysledky_II[1])+"\n");
+		io.writeNewLine();
+			
+		//	System.out.println("Xka:\n"+ Arrays.toString(vysledky_II[0]));
+		//	System.out.println("Vysledky:\n"+ Arrays.toString(vysledky_II[1]));
 
 //		System.out.println("Vzorkovani_III");
 		io.writeToFile("Vzorkovani_III\n");
 		/* Vzorkovani_III */
 		// Nevyhody
 		// - nevime kolik bude vysledku, takze nevime jak velke pole priparavit. 
-		Vzorek vysledky_III[]=toolFce.vzorkovani_III();	
+		Vzorek vysledky_III[]=toolFce.vzorkovani_III();
+		
 
 //		System.out.println("Vysledky:\n"+ Arrays.toString(vysledky_III));
+		
 		io.writeToFile("Vysledky:\n"+ Arrays.toString(vysledky_III));
 		io.writeNewLine();
 //		scanner.close();
