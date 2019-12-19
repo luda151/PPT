@@ -37,7 +37,6 @@ public class Fibon {
 
 		
 		//finbTable.FibonTable(maxNumber);
-=======
 		 int previousNumber = 0;
 		 int nextNumber = 1;
 		 
@@ -53,16 +52,13 @@ public class Fibon {
 	            previousNumber = nextNumber;
 	            nextNumber = sum;
 	        }
->>>>>>> 8e522422fd4c5d9e14833050458b4259443808e8
 
 	}
 
-
-<<<<<<< HEAD
 } 
-=======
+
 	} // Java code Loop
->>>>>>> 8e522422fd4c5d9e14833050458b4259443808e8
+
 
 
 
