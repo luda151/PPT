@@ -30,7 +30,7 @@ public class Fibon {
 
 
 		System.out.println();
-		System.out.printlns("Výpočet pomocí dynamického programování");
+		System.out.println("Výpočet pomocí dynamického programování");
 		
 		FibonTable finbTable = new FibonTable(10);
 		
