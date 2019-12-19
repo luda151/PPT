@@ -21,7 +21,7 @@ public class Fibon {
 		System.out.print("VÃ½poÄet rekurzÃ­\n");
 
 		FibonacciCalc fibRek = new FibonacciCalc();
-		
+
 		for(int i = 0; i < maxNumber; i++){
 			System.out.print(fibRek.fibonacciRecursion(i) +" ");
 		}
@@ -29,35 +29,33 @@ public class Fibon {
 
 		System.out.println();
 		System.out.println("VÃ½poÄet pomocÃ­ dynamickÃ©ho programovÃ¡nÃ­");
-		
+
 		FibonTable finbTable = new FibonTable(10);
-		
-		
+
+
 		//System.out.println(finbTable.fibDP(8));
 
-		
+
 		//finbTable.FibonTable(maxNumber);
-		 int previousNumber = 0;
-		 int nextNumber = 1;
-		 
-	        System.out.print("Fibonacciho posloupnost "+maxNumber+" èísel: ");
+		int previousNumber = 0;
+		int nextNumber = 1;
 
-	        for (int i = 1; i <= maxNumber; ++i)
-	        {
-	            System.out.print(previousNumber+" ");
-	            
+		System.out.print("Fibonacciho posloupnost "+maxNumber+" èísel: ");
 
-	      
-	            int sum = previousNumber + nextNumber;
-	            previousNumber = nextNumber;
-	            nextNumber = sum;
-	        }
+		for (int i = 1; i <= maxNumber; ++i)
+		{
+			System.out.print(previousNumber+" ");
+
+
+
+			int sum = previousNumber + nextNumber;
+			previousNumber = nextNumber;
+			nextNumber = sum;
+		}
 
 	}
 
-} 
-
-	} // Java code Loop
+} // Java code Loop
 
 
 
