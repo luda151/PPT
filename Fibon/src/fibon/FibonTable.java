@@ -1,12 +1,21 @@
+
 package fibon;
 
 import java.util.Arrays;
 
+/**  Dynamicke programovani
+ * @author Stránská, Kaplanova, Bulicek, Skalicka, Khul
+ *
+ */
 public class FibonTable {
 
 	private int Fibon_max;
 	private int[] calcTable;
 
+	/**
+	 * @param n
+	 * @return
+	 */
 	public int calcTable(int n){
 		if (n < 1) {
 			return 0; 
@@ -20,6 +29,9 @@ public class FibonTable {
 		}
 	}
 
+	/**
+	 * @param max
+	 */
 	public FibonTable(int max){
 		//if (max < 2) return;  
 		this.Fibon_max = max;
@@ -38,17 +50,4 @@ public class FibonTable {
 		System.out.println();
 
 	}
-
-	public String toString(){
-		String s = "";
-		s += "max:" + this.Fibon_max;
-		s += " table[]:" + Arrays.toString(this.calcTable);
-		return s;
-	}
 }
-
-
-
-
-//v�po�et prvku Fibonancciho posloupnosti s vyu�it�m dynamick�ho programov�n� (s vyu�it�m tabulky)
-

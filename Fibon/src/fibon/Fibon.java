@@ -1,6 +1,10 @@
 package fibon;
 public class Fibon {
 
+	/** Vola jednotlive zpusoby vypoctu
+	 * @param args
+	 * @author Stranska, Skalicka, Kaplanova, Khul, Bulicek
+	 */
 	public static void main(String[] args) {
 		int maxNumber = 10; 
 		int previousNumber = 0;
