@@ -1,19 +1,13 @@
 package fibon;
-<<<<<<< HEAD
- 
-=======
->>>>>>> 8e522422fd4c5d9e14833050458b4259443808e8
-
 public class Fibon {
 
 	public static void main(String[] args) {
 		int maxNumber = 10; 
-<<<<<<< HEAD
 		int previousNumber = 0;
 		int nextNumber = 1;
 
-		System.out.print("Fibonacciho posloupnost "+maxNumber+" čísel\n ");
-		System.out.print("Výpočet smyčkou\n");
+		System.out.print("Fibonacciho posloupnost "+maxNumber+" ÄÃ­sel\n ");
+		System.out.print("VÃ½poÄet smyÄkou\n");
 
 		for (int i = 1; i <= maxNumber; ++i)
 		{
@@ -24,7 +18,7 @@ public class Fibon {
 			nextNumber = sum;
 		}
 		System.out.println();
-		System.out.print("Výpočet rekurzí\n");
+		System.out.print("VÃ½poÄet rekurzÃ­\n");
 
 		FibonacciCalc fibRek = new FibonacciCalc();
 		
@@ -34,7 +28,7 @@ public class Fibon {
 
 
 		System.out.println();
-		System.out.println("Výpočet pomocí dynamického programování");
+		System.out.println("VÃ½poÄet pomocÃ­ dynamickÃ©ho programovÃ¡nÃ­");
 		
 		FibonTable finbTable = new FibonTable(10);
 		
@@ -47,7 +41,7 @@ public class Fibon {
 		 int previousNumber = 0;
 		 int nextNumber = 1;
 		 
-	        System.out.print("Fibonacciho posloupnost "+maxNumber+" ��sel: ");
+	        System.out.print("Fibonacciho posloupnost "+maxNumber+" èísel: ");
 
 	        for (int i = 1; i <= maxNumber; ++i)
 	        {
